@@ -1,0 +1,1190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>925</width>
+    <height>682</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ImagePro(Jack)</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icon.qrc">
+    <normaloff>:/Leo_Lion.ico</normaloff>:/Leo_Lion.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QSpinBox" name="spinBox_Canny">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QSlider" name="horizontalSlider_Canny">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QPushButton" name="okButton_Canny">
+      <property name="text">
+       <string>Ok</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QSpinBox" name="spinBox_HoughLine">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QSlider" name="horizontalSlider_HoughLine">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QPushButton" name="okButton_HoughLine">
+      <property name="text">
+       <string>Ok</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QSpinBox" name="spinBox_HoughCircle">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QSlider" name="horizontalSlider_HougCircle">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QPushButton" name="okButton_HoughCircle">
+      <property name="text">
+       <string>Ok</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QSpinBox" name="spinBox_BackProjection">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QSlider" name="horizontalSlider_BackProjection">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QPushButton" name="okButton_BackProjection">
+      <property name="text">
+       <string>Ok</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QSpinBox" name="spinBox_FindContours">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QSlider" name="horizontalSlider_FindContours">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="2">
+     <widget class="QPushButton" name="okButton_FindContours">
+      <property name="text">
+       <string>Ok</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QSpinBox" name="spinBox_Hull">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QSlider" name="horizontalSlider_Hull">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="2">
+     <widget class="QPushButton" name="okButton_Hull">
+      <property name="text">
+       <string>Ok</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QSpinBox" name="spinBox_CreatBounding">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QSlider" name="horizontalSlider_CreatBounding">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="2">
+     <widget class="QPushButton" name="okButton_CreatBounding">
+      <property name="text">
+       <string>Ok</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QSpinBox" name="spinBox_Image_Moments">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QSlider" name="horizontalSlider_Image_Moments">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="2">
+     <widget class="QPushButton" name="okButton_Image_Moments">
+      <property name="text">
+       <string>Ok</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="QSpinBox" name="spinBox_Harris_Corners">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1">
+     <widget class="QSlider" name="horizontalSlider_Harris_Corners">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="2">
+     <widget class="QPushButton" name="okButton_Harris_Corners">
+      <property name="text">
+       <string>Ok</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0">
+     <widget class="QSpinBox" name="spinBox_ShiTomasi_Corners">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="1">
+     <widget class="QSlider" name="horizontalSlider_ShiTomasi_Corners">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="2">
+     <widget class="QPushButton" name="okButton_ShiTomasi_Corners">
+      <property name="text">
+       <string>Ok</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="0">
+     <widget class="QSpinBox" name="spinBox_Subpixeles_Corners">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="1">
+     <widget class="QSlider" name="horizontalSlider_Subpixeles_Corners">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="2">
+     <widget class="QPushButton" name="okButton_Subpixeles_Corners">
+      <property name="text">
+       <string>Ok</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="0" colspan="2">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>800</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="11" column="2">
+     <widget class="QPushButton" name="okButton_Image2">
+      <property name="text">
+       <string>Wipe Image</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="0" colspan="3">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="ImageLabel">
+        <property name="contextMenuPolicy">
+         <enum>Qt::NoContextMenu</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="icon.qrc">:/Leo_Lion.ico</pixmap>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="ImageLabel_2">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="icon.qrc">:/Leo_Lion.ico</pixmap>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+   <zorder>spinBox_Canny</zorder>
+   <zorder>horizontalSlider_Canny</zorder>
+   <zorder>okButton_Canny</zorder>
+   <zorder>okButton_HoughLine</zorder>
+   <zorder>horizontalSlider_HoughLine</zorder>
+   <zorder>spinBox_HoughLine</zorder>
+   <zorder>spinBox_HoughCircle</zorder>
+   <zorder>okButton_HoughCircle</zorder>
+   <zorder>horizontalSlider_HougCircle</zorder>
+   <zorder>spinBox_BackProjection</zorder>
+   <zorder>horizontalSlider_BackProjection</zorder>
+   <zorder>okButton_BackProjection</zorder>
+   <zorder>horizontalSlider_FindContours</zorder>
+   <zorder>okButton_FindContours</zorder>
+   <zorder>spinBox_FindContours</zorder>
+   <zorder>okButton_Hull</zorder>
+   <zorder>horizontalSlider_Hull</zorder>
+   <zorder>spinBox_Hull</zorder>
+   <zorder>okButton_CreatBounding</zorder>
+   <zorder>spinBox_CreatBounding</zorder>
+   <zorder>horizontalSlider_CreatBounding</zorder>
+   <zorder>spinBox_Image_Moments</zorder>
+   <zorder>horizontalSlider_Image_Moments</zorder>
+   <zorder>okButton_Image_Moments</zorder>
+   <zorder>spinBox_Harris_Corners</zorder>
+   <zorder>horizontalSlider_Harris_Corners</zorder>
+   <zorder>okButton_Harris_Corners</zorder>
+   <zorder>horizontalSlider_ShiTomasi_Corners</zorder>
+   <zorder>spinBox_ShiTomasi_Corners</zorder>
+   <zorder>okButton_ShiTomasi_Corners</zorder>
+   <zorder>spinBox_Subpixeles_Corners</zorder>
+   <zorder>horizontalSlider_Subpixeles_Corners</zorder>
+   <zorder>okButton_Subpixeles_Corners</zorder>
+   <zorder>ImageLabel</zorder>
+   <zorder>ImageLabel_2</zorder>
+   <zorder>ImageLabel_2</zorder>
+   <zorder>okButton_Image2</zorder>
+   <zorder>horizontalSpacer</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>925</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuHoughLine">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="action_Load"/>
+    <addaction name="separator"/>
+    <addaction name="action_Save"/>
+   </widget>
+   <widget class="QMenu" name="menu_G">
+    <property name="title">
+     <string>&amp;Morphology</string>
+    </property>
+    <addaction name="action_Convert2Gray"/>
+    <addaction name="action_Binary"/>
+    <addaction name="separator"/>
+    <addaction name="action_Homogeneous_Blur"/>
+    <addaction name="action_Gaussian_Blur"/>
+    <addaction name="action_Median_Blur"/>
+    <addaction name="action_Bilateral_Blur"/>
+    <addaction name="separator"/>
+    <addaction name="action_Dilation"/>
+    <addaction name="action_Erosion"/>
+    <addaction name="separator"/>
+    <addaction name="action_Opening"/>
+    <addaction name="action_Closing"/>
+    <addaction name="action_Morphological_Gradient"/>
+    <addaction name="action_Top_Hat"/>
+    <addaction name="action_Black_Hat"/>
+    <addaction name="separator"/>
+    <addaction name="action_Discrete_Fourier_Transform"/>
+   </widget>
+   <widget class="QMenu" name="menu_Edges">
+    <property name="title">
+     <string>&amp;Edges</string>
+    </property>
+    <addaction name="action_Sobel"/>
+    <addaction name="action_Laplace"/>
+    <addaction name="action_Canny"/>
+    <addaction name="separator"/>
+    <addaction name="action_Hough_Line"/>
+    <addaction name="action_Hough_Circle"/>
+    <addaction name="separator"/>
+    <addaction name="action_Histogram_Equalization"/>
+    <addaction name="action_Histogram_Calculation"/>
+    <addaction name="action_Histogram_Comparison"/>
+    <addaction name="separator"/>
+    <addaction name="action_Back_Projection"/>
+    <addaction name="action_Template_Matching"/>
+    <addaction name="action_Finding_Contours"/>
+    <addaction name="action_Convex_Hull"/>
+    <addaction name="action_Creating_Bounding_For_Contours"/>
+    <addaction name="action_Image_Moments"/>
+    <addaction name="action_Point_Polygon_Test"/>
+   </widget>
+   <widget class="QMenu" name="menuFea_tures">
+    <property name="title">
+     <string>Fea&amp;tures</string>
+    </property>
+    <addaction name="action_Harris_corner"/>
+    <addaction name="action_Shi_Tomasi_corner"/>
+    <addaction name="action_DIY_corner"/>
+    <addaction name="action_Subpixeles_corner"/>
+    <addaction name="separator"/>
+    <addaction name="action_Feature_Detection"/>
+    <addaction name="action_Feature_Description"/>
+    <addaction name="action_Feature_Matching_FLANN"/>
+    <addaction name="action_Find_Object"/>
+   </widget>
+   <widget class="QMenu" name="menu_Calibration">
+    <property name="title">
+     <string>&amp;Calibration</string>
+    </property>
+    <addaction name="action_Camera_calibration"/>
+    <addaction name="action_Setero_Calibrarion"/>
+   </widget>
+   <widget class="QMenu" name="menuFaceDetection">
+    <property name="title">
+     <string>Face&amp;Detection</string>
+    </property>
+    <addaction name="action_Person_FaceDetection"/>
+   </widget>
+   <widget class="QMenu" name="menu_Other">
+    <property name="title">
+     <string>&amp;About</string>
+    </property>
+    <addaction name="actionImagePro_About"/>
+    <addaction name="actionQt_About"/>
+   </widget>
+   <addaction name="menuHoughLine"/>
+   <addaction name="menu_G"/>
+   <addaction name="menu_Edges"/>
+   <addaction name="menuFea_tures"/>
+   <addaction name="menu_Calibration"/>
+   <addaction name="menuFaceDetection"/>
+   <addaction name="menu_Other"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_Load">
+   <property name="text">
+    <string>&amp;Load ...</string>
+   </property>
+   <property name="toolTip">
+    <string>加载(&amp;L)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="action_Save">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Save ...</string>
+   </property>
+   <property name="toolTip">
+    <string>保存(&amp;S)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_Homogeneous_Blur">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Homogeneous Blur</string>
+   </property>
+  </action>
+  <action name="action_Gaussian_Blur">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Gaussian Blur</string>
+   </property>
+  </action>
+  <action name="action_Median_Blur">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>M&amp;edian Blur</string>
+   </property>
+  </action>
+  <action name="action_Bilateral_Blur">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Bil&amp;ateral Blur</string>
+   </property>
+  </action>
+  <action name="action_Dilation">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Dilation</string>
+   </property>
+  </action>
+  <action name="action_Erosion">
+   <property name="text">
+    <string>&amp;Erosion</string>
+   </property>
+  </action>
+  <action name="action_Opening">
+   <property name="text">
+    <string>&amp;Opening</string>
+   </property>
+  </action>
+  <action name="action_Closing">
+   <property name="text">
+    <string>&amp;Closing</string>
+   </property>
+  </action>
+  <action name="action_Morphological_Gradient">
+   <property name="text">
+    <string>&amp;Morphological Gradient</string>
+   </property>
+  </action>
+  <action name="action_Top_Hat">
+   <property name="text">
+    <string>&amp;Top Hat</string>
+   </property>
+  </action>
+  <action name="action_Black_Hat">
+   <property name="text">
+    <string>Bla&amp;ck Hat</string>
+   </property>
+  </action>
+  <action name="action_Discrete_Fourier_Transform">
+   <property name="text">
+    <string>&amp;Discrete Fourier Transform</string>
+   </property>
+  </action>
+  <action name="action_Convert2Gray">
+   <property name="text">
+    <string>&amp;Convert2Gray</string>
+   </property>
+  </action>
+  <action name="action_Binary">
+   <property name="text">
+    <string>&amp;Binary</string>
+   </property>
+  </action>
+  <action name="action_Sobel">
+   <property name="text">
+    <string>&amp;Sobel</string>
+   </property>
+  </action>
+  <action name="action_Laplace">
+   <property name="text">
+    <string>&amp;Laplace</string>
+   </property>
+  </action>
+  <action name="action_Canny">
+   <property name="text">
+    <string>Canny</string>
+   </property>
+  </action>
+  <action name="action_Hough_Line">
+   <property name="text">
+    <string>Hough Line</string>
+   </property>
+  </action>
+  <action name="action_Hough_Circle">
+   <property name="text">
+    <string>Hough Circle</string>
+   </property>
+  </action>
+  <action name="action_Histogram_Equalization">
+   <property name="text">
+    <string>Histogram Equalization</string>
+   </property>
+  </action>
+  <action name="action_Histogram_Calculation">
+   <property name="text">
+    <string>Histogram Calculation</string>
+   </property>
+  </action>
+  <action name="action_Histogram_Comparison">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Histogram Comparison</string>
+   </property>
+  </action>
+  <action name="action_Back_Projection">
+   <property name="text">
+    <string>Back Projection</string>
+   </property>
+  </action>
+  <action name="action_Template_Matching">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Template Matching</string>
+   </property>
+  </action>
+  <action name="action_Finding_Contours">
+   <property name="text">
+    <string>Finding Contours</string>
+   </property>
+  </action>
+  <action name="action_Convex_Hull">
+   <property name="text">
+    <string>Convex Hull</string>
+   </property>
+  </action>
+  <action name="action_Creating_Bounding_For_Contours">
+   <property name="text">
+    <string>Creating Bounding For Contours</string>
+   </property>
+  </action>
+  <action name="action_Image_Moments">
+   <property name="text">
+    <string>Image Moments</string>
+   </property>
+  </action>
+  <action name="action_Point_Polygon_Test">
+   <property name="text">
+    <string>Point Polygon Test</string>
+   </property>
+  </action>
+  <action name="action_Harris_corner">
+   <property name="text">
+    <string>Harris corner</string>
+   </property>
+  </action>
+  <action name="action_Shi_Tomasi_corner">
+   <property name="text">
+    <string>Shi-Tomasi corner</string>
+   </property>
+  </action>
+  <action name="action_DIY_corner">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>DIY corner</string>
+   </property>
+  </action>
+  <action name="action_Subpixeles_corner">
+   <property name="text">
+    <string>Subpixeles corner</string>
+   </property>
+  </action>
+  <action name="action_Feature_Detection">
+   <property name="text">
+    <string>Feature Detection</string>
+   </property>
+  </action>
+  <action name="action_Feature_Description">
+   <property name="text">
+    <string>Feature Description</string>
+   </property>
+  </action>
+  <action name="action_Feature_Matching_FLANN">
+   <property name="text">
+    <string>Feature Matching(FLANN)</string>
+   </property>
+  </action>
+  <action name="action_Find_Object">
+   <property name="text">
+    <string>Find Object</string>
+   </property>
+  </action>
+  <action name="action_Camera_calibration">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Camera calibration</string>
+   </property>
+  </action>
+  <action name="action_Person_FaceDetection">
+   <property name="text">
+    <string>Person FaceDetection</string>
+   </property>
+  </action>
+  <action name="action_Setero_Calibrarion">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Setero Calibrarion</string>
+   </property>
+  </action>
+  <action name="actionImagePro_About">
+   <property name="text">
+    <string>About</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="actionQt_About">
+   <property name="text">
+    <string>Qt About</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="icon.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>horizontalSlider_Canny</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox_Canny</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>134</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>42</x>
+     <y>77</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_Canny</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>horizontalSlider_Canny</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>50</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>145</x>
+     <y>82</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_HoughLine</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox_HoughLine</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>74</x>
+     <y>108</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>31</x>
+     <y>114</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_HoughLine</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>horizontalSlider_HoughLine</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>36</x>
+     <y>109</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>75</x>
+     <y>112</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_HougCircle</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox_HoughCircle</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>78</x>
+     <y>149</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_HoughCircle</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>horizontalSlider_HougCircle</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>37</x>
+     <y>146</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>79</x>
+     <y>146</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_BackProjection</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox_BackProjection</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>92</x>
+     <y>184</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>34</x>
+     <y>182</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_BackProjection</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>horizontalSlider_BackProjection</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>35</x>
+     <y>182</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>79</x>
+     <y>184</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_FindContours</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox_FindContours</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>123</x>
+     <y>212</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>33</x>
+     <y>218</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_FindContours</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>horizontalSlider_FindContours</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>39</x>
+     <y>216</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>130</x>
+     <y>219</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_Hull</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox_Hull</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>87</x>
+     <y>261</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>49</x>
+     <y>252</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_Hull</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>horizontalSlider_Hull</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>34</x>
+     <y>259</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>104</x>
+     <y>252</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_CreatBounding</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox_CreatBounding</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>113</x>
+     <y>296</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>45</x>
+     <y>293</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_CreatBounding</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>horizontalSlider_CreatBounding</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>41</x>
+     <y>296</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>101</x>
+     <y>294</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_Image_Moments</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox_Image_Moments</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>85</x>
+     <y>318</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>28</x>
+     <y>316</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_Image_Moments</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>horizontalSlider_Image_Moments</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>42</x>
+     <y>315</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>86</x>
+     <y>316</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_Harris_Corners</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox_Harris_Corners</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>97</x>
+     <y>359</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>41</x>
+     <y>367</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_Harris_Corners</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>horizontalSlider_Harris_Corners</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>35</x>
+     <y>366</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>110</x>
+     <y>365</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_ShiTomasi_Corners</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox_ShiTomasi_Corners</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>390</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>35</x>
+     <y>386</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_ShiTomasi_Corners</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>horizontalSlider_ShiTomasi_Corners</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>46</x>
+     <y>388</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>103</x>
+     <y>386</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_Subpixeles_Corners</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBox_Subpixeles_Corners</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>88</x>
+     <y>429</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>42</x>
+     <y>425</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_Subpixeles_Corners</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>horizontalSlider_Subpixeles_Corners</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>39</x>
+     <y>425</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>88</x>
+     <y>425</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>ImageLabel_2_Touched()</slot>
+ </slots>
+</ui>
